@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Project 1 - Helldivers 2</title>
+      <link rel="stylesheet" href="/css/styles.css" />
    </head>
 <body>
   <header>
@@ -9,6 +12,17 @@
    <img src="./images/helldivers2.jpg" height=500 width=400 alt= "helldivers video game title screen">
    <div> The helldivers 2 video game title screen</div>
   </header>
+  <nav class="main-menu">
+   <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+
+   <ul>
+     <li><a href="https://aondonakato.github.io/project3/index.html">Home Page</a></li>
+     <li><a href="https://aondonakato.github.io/project3/start.html">Steven's Home of the Knicks</a></li>
+     <li><a href="/content/agalgano/index.html">Agalgano's Page</a></li>
+     <li><a href="index.html" class="is-current">Jgerber9's Page</a></li>
+     <li><a href="/content/zyan17/index.html">Zyan17's Page</a></li>
+   </ul>
+ </nav>
    <main>
       <section>
       <h2> What is helldivers 2?</h2>
@@ -94,7 +108,7 @@
  
    <section>
       <h2>Accolades for helldivers 2</h2>
-      <table border="1">
+      <table border="1" class="container wide">
          <caption>Accolades</caption>
          <thead>
          <tr> 
@@ -170,6 +184,30 @@
    </footer>
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="js/menu-highlighter.js"></script>
+<script>
+     $(function () {
+    $('.menu-toggle').click(function () {
+      $('.main-menu ul').toggleClass('show');
+    });
+  });
+
+  const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // Optional: close menu on link click (for mobile)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+          navLinks.style.display = 'none';
+        }
+      });
+    });
+</script>
+</script>
 
 </body>
 </html> 

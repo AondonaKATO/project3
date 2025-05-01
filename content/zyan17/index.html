@@ -7,12 +7,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 1 - LiveBench: AI Model Performance Benchmark</title>
+    <link rel="stylesheet" href="/css/styles.css" />
 </head>
 
 <body>
     <header>
         <h1>LiveBench: A Comprehensive Benchmark for Large Language Models</h1>
     </header>
+
+    <nav class="main-menu">
+        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+     
+    <ul>
+        <li><a href="https://aondonakato.github.io/project3/index.html">Home Page</a></li>
+        <li><a href="https://aondonakato.github.io/project3/start.html">Steven's Home of the Knicks</a></li>
+        <li><a href="/content/agalgano/index.html">Agalgano's Page</a></li>
+        <li><a href="/content/jgerber9/index.html">Jgerber9's Page</a></li>
+        <li><a href="index.html" class="is-current">Zyan17's Page</a></li>
+      </ul>
+    </nav>
+
 
     <main>
         <section>
@@ -175,7 +189,7 @@
                 Anthropic, OpenAI, Google, and others perform on reasoning, coding, mathematics, data analysis, and
                 language tasks.</p>
 
-            <table border="1">
+            <table border="1" class="container wide">
                 <thead>
                     <tr>
                         <th>Model</th>
@@ -968,6 +982,29 @@
     </footer>
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="js/menu-highlighter.js"></script>
+<script>
+    $(function () {
+   $('.menu-toggle').click(function () {
+     $('.main-menu ul').toggleClass('show');
+   });
+ });
+
+ const toggle = document.getElementById('menu-toggle');
+   const navLinks = document.getElementById('nav-links');
+
+   toggle.addEventListener('click', () => {
+     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+   });
+
+   // Optional: close menu on link click (for mobile)
+   navLinks.querySelectorAll('a').forEach(link => {
+     link.addEventListener('click', () => {
+       if (window.innerWidth < 768) {
+         navLinks.style.display = 'none';
+       }
+     });
+   });
+</script>
 
 </body>
 

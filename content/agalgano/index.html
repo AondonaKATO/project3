@@ -2,13 +2,26 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Project 1 - Dark Souls</title>
+<link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
     <header>
         <h1>Dark Souls</h1>
         <hr>
     </header>
+    <nav class="main-menu">
+        <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+     
+        <ul>
+          <li><a href="https://aondonakato.github.io/project3/index.html">Home Page</a></li>
+          <li><a href="https://aondonakato.github.io/project3/start.html">Steven's Home of the Knicks</a></li>
+          <li><a href="index.html" class="is-current">Agalgano's Page</a></li>
+          <li><a href="/content/jgerber9/index.html">Jgerber9's Page</a></li>
+          <li><a href="/content/zyan17/index.html">Zyan17's Page</a></li>
+        </ul>
+      </nav>
 
     <main>
         <section>
@@ -49,10 +62,11 @@
         <p>The wraith-like remnants of the four leaders of New Londo Ruins who fell to dark after being tempted with the art of lifedrain. Defeating the Four Kings is necessary to the plot, and is also needed for those players wishing to join the Darkwraith covenant as they must defeat the Four Kings before obtaining the Lordvessel from Anor Londo and talking to Kingseeker Frampt. You can also obtain the Lordvessel then go to kill the Four Kings instead of talking to Frampt. In order to safely survive the Abyss, all players (host and any summons) must equip the Covenant of Artorias Ring prior to entering, and keep it on during the entire fight. Removing it at any point will result in death. It is not necessary to continue wearing the ring after the Four Kings are defeated.</p>
     </section>
 
+    <div>
     <article>
         <h2>Table</h2>
         <hr>
-        <table border="1">
+        <table border="1" class="container wide">
             <caption><strong>Bosses and Information</strong></caption>
             <tr>
                 <th>Bosses</th>
@@ -119,7 +133,10 @@
                 <td>7</td>
             </tr>
         </table>
-    </article>
+        </article>
+        </div>
+
+
     
     <section>
         <h2>Locations</h2>
@@ -146,7 +163,7 @@
     <footer>
         <h2>Citations</h2>
         <hr>
-        <ol>
+        <ol style="list-style-type: none; padding-left: 1em;">
             <li><a href="https://darksouls.wiki.fextralife.com/Dark+Souls+Wiki" target="_blank">https://darksouls.wiki.fextralife.com/Dark+Souls+Wiki</a></li>
             <li><a href="https://www.youtube.com/@VaatiVidya" target="_blank">VaatiVidya's Soulsborn Lore Youtube Channel</a></li>
         </ol>
@@ -154,6 +171,29 @@
     </footer>
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="js/menu-highlighter.js"></script>
+<script>
+    $(function () {
+   $('.menu-toggle').click(function () {
+     $('.main-menu ul').toggleClass('show');
+   });
+ });
+
+ const toggle = document.getElementById('menu-toggle');
+   const navLinks = document.getElementById('nav-links');
+
+   toggle.addEventListener('click', () => {
+     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+   });
+
+   // Optional: close menu on link click (for mobile)
+   navLinks.querySelectorAll('a').forEach(link => {
+     link.addEventListener('click', () => {
+       if (window.innerWidth < 768) {
+         navLinks.style.display = 'none';
+       }
+     });
+   });
+</script>
 
 </body>
 </html>
