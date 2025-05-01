@@ -1,4 +1,4 @@
-// menu-highlighter.js
+/*/ menu-highlighter.js
 
 // This function returns the current file name from the URL
 function currentFile() {
@@ -22,7 +22,7 @@ if (thisFile === "") {
     thisFile = "index.html";
 }
 
-/*/ Step 5: Highlight the appropriate menu item
+// Step 5: Highlight the appropriate menu item
 $("nav a").each(function() {
     // Check if the href matches the current file
     if (this.href.indexOf(thisFile) > 0) {
