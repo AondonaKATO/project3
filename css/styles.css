@@ -305,6 +305,16 @@ footer h2 {
   color: #F58426;
 }
 
+
+.responsive-image {
+  width: 100%;
+  max-width: 400px; /* Limits how big the image gets */
+  height: auto; /* Keeps aspect ratio */
+  border-radius: 15px; /* Curved edges */
+  display: block;
+  margin: 0 auto; /* Center image horizontally */
+}
+
 main {
   margin: 20px;
   padding: 20px;
@@ -442,22 +452,9 @@ body {
   line-height: 1.6;
 }
 
-footer {
-  background-color: #006BB6;
-  color: white;
-  padding: 25px 20px;
-  margin-top: 40px;
-  text-align: center;
-  border-top: 5px solid #F58426;
-}
 
-footer a {
-  color: #FFDCB9;
+a {
   text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
 }
 
 .container {
