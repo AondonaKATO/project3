@@ -29,6 +29,10 @@
   z-index: 2; /* Make sure it’s above the overlay */
 }
 
+h1 {
+  color: white;
+}
+
 .site-banner h1 {
   display: flex;
   align-items: center;
